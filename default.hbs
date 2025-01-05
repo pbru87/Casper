@@ -82,7 +82,17 @@
         <div class="inner">
             <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
             <nav class="site-footer-nav">
-                {{navigation type="secondary"}}
+                {{!-- {{navigation type="secondary"}} --}}
+                {{!-- Show German or English links --}}
+                <ul class="nav">
+                    {{#has tag="#german"}}
+                        <li class="nav-privacy-policy"><a href="https://blog.patrick-brunck.de/datenschutz/">Datenschutz</a></li>
+                        <li class="nav-site-notice"><a href="https://blog.patrick-brunck.de/impressum/">Impressum</a></li>
+                    {{else}}
+                        <li class="nav-privacy-policy"><a href="https://blog.patrick-brunck.de/privacy-policy/">Privacy Policy</a></li>
+                        <li class="nav-site-notice"><a href="https://blog.patrick-brunck.de/site-notice/">Site Notice</a></li>
+                    {{/has}}
+                </ul>
             </nav>
             <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
         </div>
