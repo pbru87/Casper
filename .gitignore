@@ -26,3 +26,9 @@ dist/
 config.json
 changelog.md
 changelog.md.bk
+
+# Ignore Visual Studio .vs folder
+.vs/
+
+# Ignore Visual Studio Code .vscode folder
+.vscode/
