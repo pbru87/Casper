@@ -9,6 +9,9 @@
     height: 26px; /* additional css property for .svg logo (to show up in nav bar) */
     /*max-height: 26px;*/ /* from screen.css */
 }
+.gh-social-linkedin {
+    fill: white;
+}
 /* 2. Shariff Styling */
 p.shariff-heading {
     margin-bottom: 0.75em !important;
