@@ -84,10 +84,12 @@
         </section>
         {{/author}}
 
-        {{#foreach posts}}
+    {{#foreach posts}}
+        {{^has tag="#german"}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
-        {{/foreach}}
+        {{/has}}
+    {{/foreach}}
 
     </div>
 
