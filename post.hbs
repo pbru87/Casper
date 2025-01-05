@@ -82,13 +82,13 @@ into the {body} tag of the default.hbs template --}}
 
     </header>
 
-    <section class="gh-content gh-canvas">
+    <section class="gh-content gh-canvas" {{#has tag="#german"}}lang="de"{{/has}}>
         {{content}}
 
         {{!-- Shariff Sharing Buttons --}}
         <hr>
-        <p class="shariff-heading">Teile diesen Beitrag:</p>
-        <div class="shariff" data-button-style="icon" data-services="[facebook,twitter,linkedin,xing,pocket,mail,whatsapp,threema]" data-mail-url="mailto:"></div>
+        <p class="shariff-heading">{{#has tag="#german"}}Teile diesen Beitrag{{else}}{{t "Share this"}}{{/has}}:</p>
+        <div class="shariff" data-lang={{#has tag="#german"}}"de"{{else}}"{{@site.locale}}"{{/has}} data-button-style="icon" data-services="[facebook,twitter,linkedin,xing,pocket,mail,whatsapp,threema]" data-mail-url="mailto:"></div>
     </section>
 
     {{#if comments}}
