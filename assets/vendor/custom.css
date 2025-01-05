@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* 
+	Table of contents:
+    1. Shariff Styling
+*/
+/* 1. Shariff Styling */
+p.shariff-heading {
+    margin-bottom: 0.75em !important;
+}
+.shariff {
+    width: 100% !important;
+}
+.shariff li {
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 5px !important;
+}
+.shariff li span {
+    vertical-align: baseline !important;
+    font-size: 90% !important;
+}
