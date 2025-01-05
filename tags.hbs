@@ -1,0 +1,28 @@
+{{!-- PB-Note: CSS layout is taken from page.hbs. --}}
+{{!-- See also: https://forum.ghost.org/t/ghost-tips-tricks-4-create-a-tags-list-page/15653 --}}
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} tag of the default.hbs template --}}
+
+
+<main id="site-main" class="site-main">
+<article class="article post no-image">
+
+    <header class="article-header gh-canvas">
+        <h1 class="article-title">Tags</h1>
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <ul id="tags-list">
+            {{! Get posts in alphabetical order by name. See: https://ghost.org/docs/themes/helpers/get/#order }}
+            {{#get "tags" limit="all" include="count.posts" order="name asc"}}
+                {{#foreach tags}}
+                    <li><a href="{{url}}">{{name}} ({{count.posts}})</a></li>
+                {{/foreach}}
+            {{/get}}
+        </ul>
+    </section>
+
+</article>
+</main>
