@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{else match @custom.color_scheme "Auto"}} class="auto-color"{{/match}}>
+<html lang="{{#is "post, page"}}{{#post}}{{#has tag="#german"}}de{{else}}{{@site.locale}}{{/has}}{{/post}}{{else}}{{@site.locale}}{{/is}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{else match @custom.color_scheme "Auto"}} class="auto-color"{{/match}}>
 <head>
 
     {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
@@ -84,9 +84,35 @@
         <div class="inner">
             <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
             <nav class="site-footer-nav">
-                {{navigation type="secondary"}}
+                {{!-- {{navigation type="secondary"}} --}}
+                {{!-- Show German or English links --}}
+                <ul id="secondary-nav-german" class="nav">
+                    <li><a href="javascript:UC_UI.showSecondLayer();">Cookie-Einstellungen</a></li>
+                    <li class="nav-privacy-policy"><a href="https://blog.patrickbrunck.com/datenschutz/">Datenschutz</a></li>
+                    <li class="nav-legal-notice"><a href="https://blog.patrickbrunck.com/impressum/">Impressum</a></li>
+                    <li><a href="#gh-head">Nach oben</a></li>
+                </ul>
+                <ul id="secondary-nav-english" class="nav">
+                    <li><a href="javascript:UC_UI.showSecondLayer();">Cookie Settings</a></li>
+                    <li class="nav-legal-notice"><a href="https://blog.patrickbrunck.com/legal-notice/">Legal Notice</a></li>
+                    <li class="nav-privacy-policy"><a href="https://blog.patrickbrunck.com/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="#gh-head">Top</a></li>
+                </ul>
             </nav>
             <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+        <div class="inner affiliate-notice">
+            {{#is "post, page"}}
+                {{#post}}
+                    {{#has tag="#german"}}
+                        {{> "affiliate-notice-german"}}
+                    {{else}}
+                        {{> "affiliate-notice-english"}}
+                    {{/has}}
+                {{/post}}
+            {{else}}
+                {{> "affiliate-notice-english"}}
+            {{/is}}
         </div>
     </footer>
 
