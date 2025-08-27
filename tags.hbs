@@ -16,7 +16,7 @@ into the {body} tag of the default.hbs template --}}
     <section class="gh-content gh-canvas">
         <ul id="tags-list">
             {{! Get posts in alphabetical order by name. See: https://ghost.org/docs/themes/helpers/get/#order }}
-            {{#get "tags" limit="all" include="count.posts" order="name asc" filter="slug:-[sevdesk]"}}
+            {{#get "tags" limit="100" include="count.posts" order="name asc" filter="slug:-[sevdesk]"}}
                 {{#foreach tags}}
                     <li><a href="{{url}}">{{name}} ({{count.posts}})</a></li>
                 {{/foreach}}
