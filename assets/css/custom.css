@@ -4,28 +4,38 @@
     1. Additions to Casper Theme
     2. Shariff Styling
 */
-/* 1. Additions to Casper Theme */
+
+/* 1. Additions to Casper Theme
+/* ---------------------------------------------------------- */
+
 .gh-head-logo img {
     height: 26px !important; /* additional css property for .svg logo (to show up in nav bar) */
     /*max-height: 26px;*/ /* from screen.css */
 }
-/* 2. Shariff Styling */
+
+/* 2. Shariff Styling
+/* ---------------------------------------------------------- */
+
 p.shariff-heading {
     margin-bottom: 0.75em !important;
 }
+
 .shariff {
     margin-top: 0px !important;
     width: 100% !important;
 }
+
 .shariff li {
     margin-top: 0px !important;
     margin-left: 0px !important;
     margin-right: 8px !important;
 }
+
 .shariff li span {
     vertical-align: baseline !important;
     font-size: 90% !important;
 }
+
 .shariff .orientation-horizontal li {
     padding-left: 0px;
     text-align: center;
