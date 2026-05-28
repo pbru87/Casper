@@ -3,6 +3,7 @@
 	Table of contents:
     1. Additions to Casper Theme
     2. Shariff Styling
+    3. Custom page for 'Tags'
 */
 
 /* 1. Additions to Casper Theme
@@ -39,4 +40,19 @@ p.shariff-heading {
 .shariff .orientation-horizontal li {
     padding-left: 0px;
     text-align: center;
+}
+
+/* 3. Custom page for 'Tags'
+/* ---------------------------------------------------------- */
+
+.custom-tags-page .article {
+    padding-top: max(12vmin, 64px);
+}
+
+.custom-tags-page .article-header {
+    padding-bottom: max(3.2vmin, 28px);
+}
+
+.custom-tags-page .article-title {
+    margin-bottom: 0;
 }
